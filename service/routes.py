@@ -70,7 +70,7 @@ def list_accounts():
     # use the Account.all() method to retrieve all accounts
     accounts = Account.all()
     # create a list of serialize() accounts
-    account_list = [account.serialize() for account in accounts]
+    account_list = [account.serialize()for account in accounts]
     # log the number of accounts being returned in the list 
     # return the list with a return code of status.HTTP_200_OK
 
@@ -133,9 +133,7 @@ def delete_accounts(account_id):
         account.delete()
     # return and empty body ("") with a return code of status.HTTP_204_NO_CONTENT
 
-    return "",status.HTTP_204_NO_CONTENT
-
-
+    return "", status.HTTP_204_NO_CONTENT
 ######################################################################
 #  U T I L I T Y   F U N C T I O N S
 ######################################################################
