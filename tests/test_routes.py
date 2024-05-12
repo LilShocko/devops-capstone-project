@@ -139,7 +139,6 @@ class TestAccountService(TestCase):
         # assert that data["name"] equals the account.name
         self.assertEqual(data["name"], account.name)
 
-
     def test_get_account_not_found(self):
         """It should not Read an Account that is not found"""
         resp = self.client.get(f"{BASE_URL}/0")
@@ -156,8 +155,6 @@ class TestAccountService(TestCase):
         data = response.get_json()
         # assert that the len() of the data is 5 (the number of accounts you created)
         self.assertEqual(len(data), 5)
-
-
 
     def test_update_account(self):
         """It should Update an existing Account"""
@@ -182,7 +179,6 @@ class TestAccountService(TestCase):
             f"{BASE_URL}/{account.id}")
         # assert that the resp.status_code is status.HTTP_204_NO_CONTENT
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
-
 
     def test_security_headers(self):
         """It should return security headers"""
